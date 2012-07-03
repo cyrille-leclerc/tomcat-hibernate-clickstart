@@ -83,9 +83,13 @@ public class ItemController extends HttpServlet {
 			request.setAttribute("items", out);
 			request.getRequestDispatcher("jsp/index.jsp").forward(request,
 					response);
-
+		} catch (PersistenceException e) {
+			request.setAttribute("error", "The data you entered is invalid, please make sure you did not use duplicate names.");
+			request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+		} catch (IllegalArgumentException e) {
+			request.setAttribute("error", "Cannot delete an item that doesn't exist.");
+			request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
 		} finally {
-
 			if (em.getTransaction().isActive())
 				em.getTransaction().rollback();
 			em.close();
