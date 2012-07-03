@@ -20,5 +20,5 @@ Create a new Maven project in Jenkins, changing the following:
 
 To build this locally:
 
-In the ant_template directory, open a command line, and invoke maven by typing "mvn package" to build the war file, then deploy it on cloudbees typing:
+In the maven_template directory, open a command line, and invoke maven by typing "mvn package" to build the war file, then deploy it on cloudbees typing:
 	bees app:deploy -t jboss -a MYAPP_ID target/*.war
