@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
