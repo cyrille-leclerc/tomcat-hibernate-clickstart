@@ -8,8 +8,6 @@
 
     <!-- Database connection settings -->
     <property name="hibernate.connection.datasource">java:comp/env/jdbc/HibernateDB</property>
-    <!-- Comment the above line, and uncomment the following one to deploy on JBoss -->
-    <!-- <property name="hibernate.connection.datasource">java:jdbc/HibernateDB</property> -->
 
     <!-- JDBC connection pool (use the built-in) -->
     <property name="connection.pool_size">1</property>

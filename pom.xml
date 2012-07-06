@@ -13,11 +13,31 @@
   <inceptionYear>2012</inceptionYear>
 
   <dependencies>
+    <!-- Hibernate for Tomcat -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>3.6.7.Final</version>
     </dependency>
+    <!-- Hibernate for JBoss, comment previous dependency and uncomment the following to deploy on JBoss -->
+    <!--
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.6.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>3.6.7.Final</version>
+      <exclusions>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    -->
     <dependency>
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
@@ -28,8 +48,6 @@
       <artifactId>javassist</artifactId>
       <version>3.12.1.GA</version>
     </dependency>    
-    <!-- Currently CloudBees uses tomcat 6.0.35 and we need the Servlet classes to compile with 
-    but they are provided during deployment, so we set the scope to provided. -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>servlet-api</artifactId>
