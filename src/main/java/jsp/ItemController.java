@@ -51,7 +51,7 @@ public class ItemController extends HttpServlet {
             request.setAttribute("items", out + ".\n");
             request.getRequestDispatcher("jsp/index.jsp").forward(request, response);
         } catch (HibernateException e) {
-            request.setAttribute("error", e.toString());
+            request.setAttribute("error", "Invalid query, please try again.");
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
         } 
     }
