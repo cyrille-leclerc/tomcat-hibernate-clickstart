@@ -1,14 +1,14 @@
 {
     "id": "maven_template",
     "name": "Maven and Hibernate Template for Tomcat",
-    "source": "git://github.com/benjaminsavoy/maven_hibernate.git",
+    "source": "git://github.com/benjaminsavoy/maven_template.git",
     "runtime": {
         "type": "tomcat"
     },
     "databases": [
         {
             "type": "mysql",
-            "alias": "ExampleDS"
+            "alias": "HibernateDB"
         }
     ],
     "build-with-jenkins": {

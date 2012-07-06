@@ -1,4 +1,5 @@
-To build and deploy this on CloudBees, follow those steps:
+# Maven Template with Hibernate for Tomcat on CloudBees.
+## To build and deploy this on CloudBees, follow those steps:
 
 Create application:
 	bees app:create MYAPP_ID
@@ -18,7 +19,7 @@ Create a new Maven project in Jenkins, changing the following:
 		Application Id: MYAPP_ID
 		Filename Pattern: target/*.war
 
-To build this locally:
+## To build this locally:
 
 In the maven_template directory, open a command line, and invoke maven by typing "mvn package" to build the war file, then deploy it on cloudbees typing:
 	bees app:deploy -t jboss -a MYAPP_ID target/*.war
