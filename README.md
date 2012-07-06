@@ -26,10 +26,9 @@ Create a new Maven project in Jenkins, changing the following:
 * Add this git repository (or yours, with this code) on Jenkins
 * Also check "Deploy to CloudBees" with those parameters:
 
-
-    Applications: First Match
-    Application Id: MYAPP_ID
-    Filename Pattern: target/*.war
+        Applications: First Match
+        Application Id: MYAPP_ID
+        Filename Pattern: target/*.war
 
 * Optionally change the application container to Java EE, if you wish to deploy on JBoss. 
 
