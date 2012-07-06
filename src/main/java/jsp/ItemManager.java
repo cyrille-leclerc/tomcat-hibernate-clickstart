@@ -20,6 +20,7 @@ class ItemManager {
         try {
             Item i = (Item) session.load(Item.class, name);
             session.delete(i);
+            tx.commit();
         } catch (HibernateException e) {
             tx.rollback();
             throw e;

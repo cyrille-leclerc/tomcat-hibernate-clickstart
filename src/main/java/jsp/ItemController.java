@@ -16,6 +16,9 @@ public class ItemController extends HttpServlet {
         super();
     }
 
+    /* Our code doesn't use any GET requests, so we instead do a POST request
+    which will just list the items we have saved in the database. */
+
     @Override
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
@@ -25,9 +28,9 @@ public class ItemController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        ItemManager manager = ItemManagerFactory.getManager();
-
         try {
+            ItemManager manager = ItemManagerFactory.getManager();
+
             if (request.getParameter("remove") != null) {
                 String name = request.getParameter("removeName");
                 manager.delete(name);
@@ -37,22 +40,13 @@ public class ItemController extends HttpServlet {
                 String comment = request.getParameter("comment");
                 manager.add(name, comment);
             }
-
-            List<Item> itemList = manager.getItems();
-            StringBuilder sb = new StringBuilder();
-            for (Item item : itemList) {
-                sb.append("<div class=\"item\">\n<tr><td>");
-                sb.append(item.getName());
-                sb.append("</td><td>");
-                sb.append(item.getComment());
-                sb.append("</td></tr>\n</div>\n");
-            }
-            String out = sb.toString();
-            request.setAttribute("items", out + ".\n");
+            request.setAttribute("items", manager.getItems());
             request.getRequestDispatcher("jsp/index.jsp").forward(request, response);
+
+        // ItemManager methods can throw HibernateException, so we catch them with a standard error page.
         } catch (HibernateException e) {
             request.setAttribute("error", "Invalid query, please try again.");
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
-        } 
+        }
     }
 }

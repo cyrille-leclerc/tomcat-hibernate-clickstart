@@ -1,9 +1,9 @@
 {
-    "id": "simple-web-example",
-    "name": "Simple Web and DB Example",
-    "source": "git://github.com/benjaminsavoy/maven_template.git",
+    "id": "maven_template",
+    "name": "Maven and Hibernate Template for Tomcat",
+    "source": "git://github.com/benjaminsavoy/maven_hibernate.git",
     "runtime": {
-        "type": "jboss"
+        "type": "tomcat"
     },
     "databases": [
         {
