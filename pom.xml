@@ -13,12 +13,14 @@
   <inceptionYear>2012</inceptionYear>
 
   <dependencies>
+
     <!-- Hibernate for Tomcat -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>3.6.7.Final</version>
     </dependency>
+                
     <!-- Hibernate for JBoss, comment previous dependency and uncomment the following to deploy on JBoss -->
     <!--
     <dependency>

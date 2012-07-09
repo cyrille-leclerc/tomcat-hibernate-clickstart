@@ -44,4 +44,4 @@ Or, for JBoss:
 
 ## To deploy this locally:
 
-Make sure you have a MySQL database bound to java:comp/env/jdbc/HibernateDB, and then deploy in your favorite container.
+Make sure you have a MySQL database bound to java:/comp/env/jdbc/ExampleDS, and then deploy in your favorite container.

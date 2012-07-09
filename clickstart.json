@@ -10,7 +10,7 @@
     "databases": [
         {
             "type": "mysql",
-            "alias": "HibernateDB"
+            "alias": "ExampleDS"
         }
     ],
     "build-with-jenkins": {
