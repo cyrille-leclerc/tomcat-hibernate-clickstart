@@ -1,11 +1,10 @@
-# Maven Template with Hibernate for Tomcat on CloudBees.
+# Maven Template with Hibernate for CloudBees.
 
 ## Note before deploying this on JBoss 7:
 
-There are configuration changes to do in the following files, comments will indicate which lines to change and how.
+There are configuration changes to do in the following file, comments will indicate which lines to change and how.
 
     src/main/webapp/WEB-INF/web.xml
-    pom.xml
 
 ## To build and deploy this on CloudBees, follow those steps:
 
@@ -36,7 +35,7 @@ Create a new Maven project in Jenkins, changing the following:
 
 In the maven_template directory, open a command line, and invoke maven by typing "mvn package" to build the war file, then deploy it on cloudbees typing:
 
-    bees app:deploy -a MYAPP_ID target/*.war
+    bees app:deploy -t tomcat -a MYAPP_ID target/*.war
 
 Or, for JBoss:
 
@@ -44,4 +43,4 @@ Or, for JBoss:
 
 ## To deploy this locally:
 
-Make sure you have a MySQL database bound to java:/comp/env/jdbc/ExampleDS, and then deploy in your favorite container.
+Make sure you have a MySQL database bound to java:comp/env/jdbc/ExampleDS, and then deploy in your favorite container.
