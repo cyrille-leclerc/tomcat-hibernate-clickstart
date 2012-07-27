@@ -3,9 +3,7 @@
     "name": "Maven and Hibernate Template for CloudBees",
     "source": "git://github.com/benjaminsavoy/maven_template.git",
     "runtime": {
-        "type": "tomcat"
-        // Comment the above line, and uncomment the following one to deploy on JBoss
-        //"type": "jboss"
+        "type": "tomcat"                
     },
     "databases": [
         {
