@@ -1,7 +1,9 @@
 {
     "id": "maven_template",
-    "name": "Maven and Hibernate Template for CloudBees",
+    "name": "Hibernate and tomcat",
     "source": "git://github.com/benjaminsavoy/maven_template.git",
+    "description" : "This is a basic hibernate and tomcat application showcasing ORM",
+    "doc-url" : "https://github.com/CloudBees-community/maven_template/blob/master/README.md",
     "runtime": {
         "type": "tomcat"                
     },
