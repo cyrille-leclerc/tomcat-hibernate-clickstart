@@ -6,6 +6,7 @@
 		<meta http-equiv="content-type"
 		content="text/html;charset=utf-8">
 		<title>Java for the web.</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	</head>
 	<body>
 		<form action="/" method="post">
@@ -67,6 +68,7 @@
 		  <div><i>You will want to remove this notice one day</i></div>
 		  </div>
 		</div>
+
 		<script type="text/javascript" src="https://s3.amazonaws.com/cloudbees-downloads/clickstart_intro.js"></script>  
 		<!-- ************************************************************************************** 
 		   end clickstart boilerplate section
