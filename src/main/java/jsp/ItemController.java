@@ -21,7 +21,17 @@ public class ItemController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        try {
+            ItemManager manager = ItemManagerFactory.getManager();
+
+            request.setAttribute("items", manager.getItems());
+            request.getRequestDispatcher("jsp/index.jsp").forward(request, response);
+
+        // ItemManager methods can throw HibernateException, so we catch them with a standard error page.
+        } catch (HibernateException e) {
+            request.setAttribute("error", "Invalid query, please try again.");
+            request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
     }
 
     @Override
@@ -37,10 +47,11 @@ public class ItemController extends HttpServlet {
             } else if (request.getParameter("add") != null) {
                 String name = request.getParameter("name");
                 String comment = request.getParameter("comment");
-                manager.add(name, comment);
+                manager.add(new Item(name, comment));
             }
-            request.setAttribute("items", manager.getItems());
-            request.getRequestDispatcher("jsp/index.jsp").forward(request, response);
+            
+            // Finally, we do our usual page layout
+            doGet(request, response);
 
         // ItemManager methods can throw HibernateException, so we catch them with a standard error page.
         } catch (HibernateException e) {
