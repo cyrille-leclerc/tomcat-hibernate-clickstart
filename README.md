@@ -1,4 +1,16 @@
-# Maven Template with Hibernate for CloudBees.
+#  Hibernate and tomcat clickstart
+
+This clickstart sets up a database, build service, repository and a basic Java servlet and Hibernate ORM application.
+All built by maven. 
+
+Launch this clickstart and glory could be yours too ! Use it as a building block if you like.
+
+You can launch this on Cloudbees via a clickstart automatically, or follow the instructions below. 
+
+
+
+# Deploying manually: 
+
 
 ## Note before deploying this on JBoss 7:
 
