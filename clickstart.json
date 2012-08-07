@@ -4,6 +4,7 @@
     "source": "git://github.com/CloudBees-community/maven_template.git",
     "description" : "This is a basic hibernate and tomcat application showcasing ORM",
     "doc-url" : "https://github.com/CloudBees-community/maven_template/blob/master/README.md",
+    "icon" : "https://raw.github.com/CloudBees-community/maven_template/master/sample-icon.png",
     "runtime": {
         "type": "tomcat"                
     },
