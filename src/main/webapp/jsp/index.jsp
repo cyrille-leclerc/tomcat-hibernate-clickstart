@@ -46,7 +46,7 @@
 
 
   <!-- this is used for first time display of clickstart - a template-->
-  <div id="clickstart_content">
+  <div id="clickstart_content" style="display:none">
      <p>
       Congratulations, <a href="#CS_appManageUrl"><span>#CS_appName</span></a>, your <a href="#CS_docUrl"><span>#CS_name</span></a> application is now running.<br />
       To modify it, take the following steps to clone the source repository:
