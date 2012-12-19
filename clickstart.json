@@ -8,7 +8,7 @@
     "app-package" : "https://s3.amazonaws.com/cloudbees-downloads/clickstart/hibernate_basic_maven.war", 
 
     "supported-by" : "cloudbees",
-    "order" : 1,
+    "order" : 2,
    
     "runtime": {
         "type": "tomcat"                
