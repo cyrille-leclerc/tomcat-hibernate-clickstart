@@ -1,9 +1,9 @@
-#  Hibernate and tomcat clickstart
+#  Hibernate and Tomcat clickstart
 
 This clickstart sets up a database, build service, repository and a basic Java servlet and Hibernate ORM application.
 All built by maven. 
 
-<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/maven_template/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly_white.png"/></a>
+<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/tomcat-hibernate-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly_white.png"/></a>
 
 Launch this clickstart and glory could be yours too ! Use it as a building block if you like.
 
@@ -57,4 +57,4 @@ Or, for JBoss:
 
 ## To deploy this locally:
 
-Make sure you have a MySQL database bound to java:comp/env/jdbc/ExampleDS, and then deploy in your favorite container.
+Make sure you have a MySQL database bound to `java:comp/env/jdbc/ExampleDS`, and then deploy in your favorite container.
